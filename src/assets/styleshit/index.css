@@ -1,0 +1,49 @@
+@import "./normalize.css";
+@import "./fonts.css";
+@import "./variables.css";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: var(--primary-color);
+  line-height: 24px;
+}
+
+
+

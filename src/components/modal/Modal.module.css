@@ -1,0 +1,61 @@
+.modalBackdrop {
+    background-color: rgba(100, 100, 100, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100vw;
+    height: 100%;
+    /* top: 0; */
+    left: 0;
+    position: fixed;
+    z-index: 30;
+}
+
+.modalBox {
+    box-shadow: 3px 8px 19px 0px rgba(0, 0, 0, 0.4);
+    width: 340px;
+    height: 100vh;
+    border-radius: 6px;
+    background-color: #fff;
+    position: fixed;
+    top:50%;
+    left: 31%;
+    transform: translate(-50%,50%);
+}
+
+.modalCaption {
+    position: absolute;
+    top: 7px;
+    left: 15px;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.modalClose {
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    outline: none;
+}
+
+.modalDescription{
+    position: absolute;
+    top: 51px;
+    left: 0;
+    border-top: 1px solid #b8b0b0;
+    border-bottom: 1px solid #b8b0b0;
+    padding: 10px 10px;
+    
+}
+
+.modalGreatBtn{
+    position: absolute;
+    bottom: 8px;
+    right: 15px;
+    color: var(--secondary-color);
+    padding: 7px 30px;
+    background-color: var(--third-color);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}

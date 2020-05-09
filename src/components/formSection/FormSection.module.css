@@ -1,0 +1,187 @@
+.form {
+    width: 320px;
+    margin: 0 auto;
+}
+
+.form__caption {
+    padding-top: 50px;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 34px;
+    margin-bottom: 10px;
+}
+
+.form__description {
+    color: #726e6e;
+    margin-bottom: 34px;
+}
+
+.formInputDesk {
+    text-align: left;
+    font-size: 14px;
+    text-transform: capitalize;
+    margin-bottom: 7px;
+}
+
+.formInput {
+    border: 1px solid #44525f;
+    width: 93%;
+    height: 35px;
+    border-radius: 3px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.lastInput{
+    margin-bottom: 7px;
+}
+
+.formNumberDesc {
+    font-size: 10px;
+    text-align: left;
+    line-height: 0px;
+    margin-bottom: 25px;
+}
+
+.formUserPosition{
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.radioBtn{
+    margin-bottom: 10px;
+}
+
+
+.formPhoto{
+    border: 1px solid #808080;
+    width: 93%;
+    height: 35px;
+    border-radius: 3px;
+    padding-left: 20px;
+    margin-bottom: 15px; 
+}
+ 
+.uploadInput{
+    
+    border-style: solid ;
+    border-width: 1px 1px 1px 1px;
+
+    width: 60%;
+    height: 34px;
+    border-radius: 3px 0px 0px 3px;
+    padding-left: 20px;
+    outline: none;
+}
+
+
+.uploadBtn{
+    padding: 8px 20px;
+    margin-bottom: 20px;
+    background-color: #f8f5f5;
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
+    border-radius: 0px 3px 3px 0px;
+    outline: none;
+}
+
+
+
+
+.btnSubmit{
+    color: var(--secondary-color);
+    padding: 10px 59px;
+    background-color: var(--third-color);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+
+.backdropDiv {
+    position: absolute;
+    height: 100vh;
+    width: 100vh;
+    top: 0;
+    left: 0;
+  }
+
+
+
+input[type="radio"]:checked, 
+input[type="radio"]:not(:checked) 
+{
+    position: absolute;
+    left: -9999px;
+}
+
+input[type="radio"]:checked + label, 
+input[type="radio"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer; 
+}
+
+input[type="radio"]:checked + label:before, 
+input[type="radio"]:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff; 
+}
+
+
+
+input[type="radio"]:checked + label:before, 
+input[type="radio"]:not(:checked) + label:before {
+    border-radius: 100%;
+}
+
+ 
+input[type="radio"]:checked + label:after, 
+input[type="radio"]:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+
+
+input[type="radio"]:checked + label:after, 
+input[type="radio"]:not(:checked) + label:after {
+    left: 6px;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #0285ff;
+    outline: none;
+}
+
+
+input[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+}
+
+
+input[type="radio"]:checked + label:after {
+    opacity: 1;
+}
+
+.containerRadioBtn{
+    text-align: left;
+}

@@ -1,0 +1,41 @@
+.modalBackdrops {
+    background-color: rgba(100, 100, 100, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100vw;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.modalBoxes {
+    box-shadow: 3px 8px 19px 0px rgba(0, 0, 0, 0.4);
+    width: 293px;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top:0;
+    left: 0;
+}
+
+.modalLogo{
+    padding: 10px 0;
+    padding-left: 14px;
+}
+
+.modalList{
+    border-top: 1px solid #86848467;
+    border-bottom: 1px solid #86848467;
+}
+
+.madalItem{
+text-align: left;
+padding-left: 10px;
+margin-bottom: 20px;
+}
+
+.madalItem:first-child{
+    padding-top: 25px;
+}

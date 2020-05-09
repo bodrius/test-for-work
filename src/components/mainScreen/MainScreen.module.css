@@ -1,0 +1,44 @@
+.container {
+    background-image: url('../../assets/image/banner-photo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    margin-bottom: 74px;
+}
+
+.box {
+    width: 325px;
+    margin: 0 auto;
+    padding-bottom: 75px;
+}
+
+.box__caption {
+    padding-top: 111px;
+    font-size: 30px;
+    line-height: 34px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    margin-bottom: 18px;
+}
+
+.box__description {
+    color: var(--secondary-color);
+    font-weight: 300;
+    font-size: 15px;
+
+}
+
+.box_button {
+    margin-top: 23px;
+    color: var(--secondary-color);
+    background-color: var(--third-color);
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+    margin: 0 auto;
+    width: 210px;
+    margin-top: 23px;
+    padding: 8px 0;
+}
