@@ -64,10 +64,8 @@
 }
  
 .uploadInput{
-    
     border-style: solid ;
     border-width: 1px 1px 1px 1px;
-
     width: 60%;
     height: 34px;
     border-radius: 3px 0px 0px 3px;
@@ -104,8 +102,6 @@
 
 .backdropDiv {
     position: absolute;
-    height: 100vh;
-    width: 100vh;
     top: 0;
     left: 0;
   }
@@ -184,4 +180,80 @@ input[type="radio"]:checked + label:after {
 
 .containerRadioBtn{
     text-align: left;
+}
+
+@media (min-width: 768px) {
+
+
+    .form__caption {
+        font-size: 40px;
+        line-height: 44px;
+        margin-bottom: 18px;
+    }
+
+    .form {
+        width: 710px;
+    }
+
+    .form__description {
+        width: 465px;
+        margin: 0 auto;
+        margin-bottom: 27px;
+    }
+
+    .formInput {
+        width: 64%;
+        height: 35px;
+        margin-bottom: 22px;
+    }
+
+    .formInputDesk {
+        padding-left: 119px;
+    }
+
+    .formNumberDesc {
+       padding-left: 119px;
+       margin-bottom: 27px;
+    }
+    .lastInput{
+        margin-bottom: 14px;
+    }
+    
+    .formUserPosition{
+        text-align: left;
+        padding-left: 125px;
+        }
+    
+    .radioBtn{
+        margin-bottom: 6px;
+        padding-left: 119px;
+    }
+
+    .uploadInput{
+       width: 51%;
+       height: 38px;
+    }
+    
+    
+    .uploadBtn{
+        padding: 10px 13px;
+       margin-bottom: 20px;
+    }
+        
+    .uploadSection{
+        margin-bottom: 20px;
+    }
+    
+    .btnSubmit{
+        color: var(--secondary-color);
+        padding: 10px 59px;
+        background-color: var(--third-color);
+        border-radius: 3px;
+        outline: none;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+    
 }

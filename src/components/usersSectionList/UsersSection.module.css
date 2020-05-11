@@ -1,16 +1,16 @@
-.section{
+.section {
     background-color: var(--secondary-background);
     padding-bottom: 30px;
-   
+
 }
 
-.section_users{
+.section_users {
     width: 330px;
     margin: 0 auto;
-    
+
 }
 
-.section__caption{
+.section__caption {
     padding-top: 79px;
     font-weight: 300;
     font-size: 30px;
@@ -18,34 +18,35 @@
     margin-bottom: 10px;
 }
 
-.section__description{
+.section__description {
     color: #726e6e;
     margin-bottom: 34px;
 }
 
-.section__list{
+.section__list {
     margin-bottom: 20px;
 }
 
-.section__item{
+.section__item {
     margin-bottom: 20px;
     width: 200px;
     margin: 0 auto;
     overflow: hidden;
 }
 
-.section__item:last-child{
+.section__item:last-child {
     margin-bottom: 0;
 }
 
-.section__img{
+.section__img {
     margin: 0 auto;
     width: 70px;
     height: 70px;
     border-radius: 50%;
     margin-bottom: 20px;
 }
-.section__userName{
+
+.section__userName {
     font-size: 24px;
     line-height: 29px;
     margin-bottom: 21px;
@@ -53,7 +54,7 @@
 }
 
 
-.section__paragraph{
+.section__paragraph {
     display: block;
     color: #726e6e;
     margin-bottom: 12px;
@@ -61,11 +62,54 @@
     text-overflow: ellipsis;
 }
 
-.section__btn{
+.section__btn {
     margin-bottom: 30px;
     color: var(--secondary-color);
     padding: 10px 59px;
     background-color: var(--third-color);
     border-radius: 3px;
     outline: none;
+}
+
+@media (min-width: 768px) {
+    .section__caption {
+        padding-top: 113px;
+        font-weight: 300;
+        font-size: 40px;
+        line-height: 44px;
+        margin-bottom: 18px;
+    }
+
+    .section__description {
+        margin-bottom: 75px;
+    }
+
+    .section_users {
+        width: 710px;
+        margin: 0 auto;
+    }
+
+    .section__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 710px;
+        margin: 0 auto;
+    }
+
+    .section__item {
+        margin-bottom: 20px;
+    }
+
+    .section__img {
+        margin-bottom: 15px;
+    }
+
+    .section__users {
+        margin-bottom: 90px;
+    }
+
+    .section {
+        margin-bottom: 31px;
+    }
 }

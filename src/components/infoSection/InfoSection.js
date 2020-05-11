@@ -6,11 +6,15 @@ const InfoSection = () => {
   return (
     <div className={styles.container}>
       <h3 className={styles.section__caption}>Lets's get acquainted</h3>
+      <div className={styles.section__boxTablet}>
+      <div className={styles.section__boxImage}>
       <img
         className={styles.section__img}
         src={require(`../../assets/image/man-laptop-v1.svg`)}
         alt="img"
       />
+      </div>
+      <div>
       <h4 className={styles.section__title}>I am cool frontend developer</h4>
       <p className={styles.section__description}>
         We will evaluate how clean your approach to wtiting CSS and Javascript
@@ -35,6 +39,8 @@ const InfoSection = () => {
       >
         Sing up now
       </Link>
+      </div>
+      </div>
     </div>
   );
 };

@@ -7,6 +7,16 @@
     margin-bottom: 74px;
 }
 
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .container {
+        background: url('../../assets/image/banner-photo@2x.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+
 .box {
     width: 325px;
     margin: 0 auto;
@@ -21,6 +31,10 @@
     text-transform: uppercase;
     color: var(--secondary-color);
     margin-bottom: 18px;
+}
+
+.box__descriptionTablet {
+    display: none;
 }
 
 .box__description {
@@ -41,4 +55,49 @@
     width: 210px;
     margin-top: 23px;
     padding: 8px 0;
+}
+
+
+@media (min-width: 768px) {
+
+    .container {
+        background-position-x: 0px;
+
+        margin-bottom: 115px;
+    }
+
+    .box {
+        width: 710px;
+        text-align: left;
+        padding-bottom: 63px;
+    }
+
+    .box__caption {
+        padding-top: 111px;
+        font-size: 40px;
+        line-height: 44px;
+        margin-bottom: 25px;
+        width: 415px;
+
+    }
+
+    .box__description {
+        display: none;
+    }
+
+    .box__descriptionTablet {
+        display: block;
+        color: var(--secondary-color);
+        font-weight: 300;
+        font-size: 15px;
+        width: 450px;
+        letter-spacing: 0.3px;
+        margin-bottom: 34px;
+    }
+
+    .box_button {
+        margin: 0;
+        text-align: center;
+    }
+
 }

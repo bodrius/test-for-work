@@ -35,3 +35,36 @@
     cursor: pointer;
     outline: none;
 }
+
+@media (min-width: 768px) {
+
+    .container {
+        width: 710px;
+
+    }
+
+    .section__caption {
+        letter-spacing: -1px;
+        font-size: 40px;
+        line-height: 44px;
+        margin-bottom: 67px;
+    }
+
+    .section__boxTablet {
+        display: flex;
+        text-align: left;
+    }
+
+    .section__boxImage {
+        width: 1000px;
+        margin-right: 34px;
+    }
+
+    .section__img {
+        margin: 0;
+    }
+
+    .section__btn {
+        margin-bottom: 115px;
+    }
+}

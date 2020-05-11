@@ -11,7 +11,14 @@ const MainScreen = () => {
         </h2>
         <span className={styles.box__description}>
           We kindly remind you that your test assignment should be submitted as
-          a link to github/bitbucket repository.{" "}
+          a link to github/bitbucket repository.
+        </span>
+        <span className={styles.box__descriptionTablet}>
+          We kindly remind you that your test assignment should be submitted as
+          a link to github/bitbucket repository. Please be patient, we consider
+          and respond to every aplication that meets minimum requirements.
+          We look forward to your submissions. Good luck! The photo has to scale in the banner
+          area on the different screens
         </span>
 
         <Link

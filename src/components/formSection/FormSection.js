@@ -31,7 +31,6 @@ const FormSection = () => {
     const result = getTrueValue.filter((e, i) => i % 2);
     const userID = result.find((point) => point.checked === true);
     const finalRez = Object.entries(userID);
-    
     return finalRez[1][1].id;
   };
 
@@ -47,7 +46,7 @@ const FormSection = () => {
       photo: pathFiles,
     };
 
-    var formData = new FormData();
+    let formData = new FormData();
     const node = ref.current.input.current.files[0];
     formData.append("position_id", `${user.position_id}`);
     formData.append("name", `${user.login}`);
@@ -57,7 +56,7 @@ const FormSection = () => {
 
     const URL = "https://frontend-test-assignment-api.abz.agency/api/v1/users";
     const token =
-      "eyJpdiI6IjRVQUhFWWo4bnFLd0luMmpPSloxRFE9PSIsInZhbHVlIjoidlVcL3BrMzNFN014K2xVZ3VBUWprdzJzZ3ltS2pVbThRcitzT1B5dm9TcTdoVGVYMlE1U0loRFVlaDlWSWJPa3VjcDBmNVp0OVRwSFwvUG8zbjNhZHJudz09IiwibWFjIjoiMjc0OWU5Y2RlNzFmZmM1YThmYzYzMjliOWNlNmFmMDIzYTQxY2U1YzgzNDhkYmM1YTMyZGFiYzY4MDg5M2IwZSJ9";
+      "eyJpdiI6IittZlpkb2JNek1tTjUzVDl6N1hlMkE9PSIsInZhbHVlIjoiMm5jNVBmUlJjczI4XC9GenU0TlRPbDVuUnl2WGtNQkJBSFhFTytHNVBWK0NITGNhV1J2eW0xalwvRlh6WEtUQkZsRnlHNUFQYkxlY3pVeGtHQ1B2ZVE2QT09IiwibWFjIjoiYjk3ZjZkZmQ0Y2RkNmY5YmJkMDU1OTUzZjU5MTA2MmE4NDMzNjE5NWFjOWZiNGZmZjE4NWM2NTFmMWRiNDBhMSJ9";
 
     fetch(URL, {
       method: "POST",
@@ -87,12 +86,12 @@ const FormSection = () => {
         });
       });
 
-// eslint-disable-next-line
-      const userRefresh = {
+    // eslint-disable-next-line
+    const userRefresh = {
       login: (event.target.elements[0].value = ""),
       email: (event.target.elements[1].value = ""),
       phone: (event.target.elements[2].value = ""),
-      position_id: (false),
+      position_id: false,
       photo: setPathFiles(""),
     };
   };
@@ -145,7 +144,7 @@ const FormSection = () => {
         </div>
         <p className={styles.formUserPosition}>Photo</p>
 
-        <div>
+        <div className={styles.uploadSection}>
           <input
             className={styles.uploadInput}
             disabled={true}

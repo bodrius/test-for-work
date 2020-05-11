@@ -9,6 +9,7 @@
 .container__box{
     width: 330px;
     display: flex;
+    align-items: center;
     margin: 10px auto;
     justify-content: space-between;
 }
@@ -29,4 +30,12 @@
     top: 0;
     left: 0;
     
+  }
+
+  @media (min-width: 768px) {
+    .container__box{
+        width: 710px;
+        height: 21px;
+        margin-bottom: 20px;
+    }
   }

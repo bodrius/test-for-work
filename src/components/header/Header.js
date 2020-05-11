@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <div className={styles.container}>
       <div className={styles.container__box}>
-        <img src={require(`../../assets/image/logo.svg`)} alt="gift-box" />
+        <img className={styles.container__logo} src={require(`../../assets/image/logo.svg`)} alt="gift-box" />
         <button
           onClick={() => setFlag(true)}
           className={styles.container__button}

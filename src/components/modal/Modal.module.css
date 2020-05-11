@@ -1,8 +1,8 @@
 .modalBackdrop {
     background-color: rgba(100, 100, 100, 0.3);
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-end; */
     width: 100vw;
     height: 100%;
     /* top: 0; */
@@ -14,13 +14,13 @@
 .modalBox {
     box-shadow: 3px 8px 19px 0px rgba(0, 0, 0, 0.4);
     width: 340px;
-    height: 100vh;
+    height: 167px;
     border-radius: 6px;
     background-color: #fff;
     position: fixed;
     top:50%;
-    left: 31%;
-    transform: translate(-50%,50%);
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .modalCaption {
