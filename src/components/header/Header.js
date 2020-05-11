@@ -1,21 +1,17 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 import styles from "./Header.module.css";
 import Menu from "../menu/Menu";
-import transitionMenu from "../../ui/transitionMenu.module.css";
+import animation from "../../ui/AnimationMenu.module.css";
 
 const Header = () => {
-  const [isMenuOpen, setMenuState] = useState(false);
-
-  const openModal = () => {
-    setMenuState(true);
-  };
+  const [flag, setFlag] = useState(false);
 
   function useOutsideAlerter(ref) {
     useEffect(() => {
       function handleClickOutside(event) {
         if (ref.current && !ref.current.contains(event.target)) {
-          setMenuState(false);
+          setFlag(false);
         }
       }
       document.addEventListener("mousedown", handleClickOutside);
@@ -25,24 +21,27 @@ const Header = () => {
     }, [ref]);
   }
 
-
-
-
   return (
     <div className={styles.container}>
       <div className={styles.container__box}>
         <img src={require(`../../assets/image/logo.svg`)} alt="gift-box" />
         <button
-          onClick={openModal}
+          onClick={() => setFlag(true)}
           className={styles.container__button}
         ></button>
-        <div className={styles.backdropDive}>
-          {isMenuOpen && (
-            <CSSTransition timeout={3000} in={isMenuOpen} unmountOnExit className={transitionMenu}>
-              <Menu useOutsideAlerter={useOutsideAlerter}/>
-            </CSSTransition>
-          )}
-        </div>
+        { (
+          <div className={styles.backdropDive}>
+          <CSSTransition
+            in={flag}
+            classNames={animation}
+            timeout={900}
+            unmountOnExit
+          >
+            
+              <Menu closeModal={useOutsideAlerter} />
+          </CSSTransition>
+            </div>
+        )}
       </div>
     </div>
   );

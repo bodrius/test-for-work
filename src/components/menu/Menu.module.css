@@ -30,12 +30,20 @@
     border-bottom: 1px solid #86848467;
 }
 
-.madalItem{
+
+
+.borderStyle{
+    border-bottom: 1px solid #86848467
+}
+
+.modalItem{
 text-align: left;
 padding-left: 10px;
 margin-bottom: 20px;
+color: #000000;
 }
 
-.madalItem:first-child{
+
+.modalLi:first-child{
     padding-top: 25px;
 }

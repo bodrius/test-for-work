@@ -107,7 +107,6 @@ const FormSection = () => {
       <form onSubmit={handelSubmitForm}>
         <p className={styles.formInputDesk}>Name</p>
         <input
-          // value={login}
           name="login"
           className={styles.formInput}
           type="text"
@@ -117,7 +116,6 @@ const FormSection = () => {
         />
         <p className={styles.formInputDesk}>Email</p>
         <input
-          // value={email}
           name="email"
           className={styles.formInput}
           type="email"
@@ -126,7 +124,6 @@ const FormSection = () => {
         />
         <p className={styles.formInputDesk}>Phone number</p>
         <input
-          // value={phone}
           name="phone"
           pattern="(^[\+]{0,1}380([0-9]{9})$)"
           className={styles.formInput + " " + styles.lastInput}

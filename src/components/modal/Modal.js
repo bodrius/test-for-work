@@ -3,6 +3,7 @@ import styles from "./Modal.module.css";
 
 const Modal = ({closeModal}) => {
   return (
+    
     <div className={styles.modalBackdrop}>
       <div className={styles.modalBox}>
         <span className={styles.modalCaption}>Congratulations</span>
