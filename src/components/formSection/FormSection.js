@@ -3,14 +3,16 @@ import InputFiles from "react-input-files";
 import PNotify from "../../../node_modules/pnotify/dist/es/PNotify";
 import "../../../node_modules/pnotify/dist/PNotifyBrightTheme.css";
 import * as getPoints from "../../services";
+import * as receiveToken from "../../services";
 import styles from "./FormSection.module.css";
 import Modal from "../modal/Modal";
 
 const FormSection = () => {
   const [pathFiles, setPathFiles] = useState("");
   const [radioButtons, setRadioButtons] = useState([]);
+  const [token, setGetToken] = useState("");
   // const [checked, setChecked] = useState(false);
-  const [register, setRegister] = useState("rtrt");
+  const [register, setRegister] = useState("");
 
   const ref = React.createRef();
 
@@ -21,10 +23,12 @@ const FormSection = () => {
     });
   }, []);
 
-  // function for close modal window
-  const closeModal = () => {
-    setRegister(false);
-  };
+  // REST API methot GET for receive user token
+  useEffect(() => {
+    receiveToken.getUserToken().then((data) => {
+      return setGetToken(data.data.token);
+    });
+  }, []);
 
   // function for receive id checked radio button
   const getIdRadioBtn = (event) => {
@@ -59,36 +63,31 @@ const FormSection = () => {
     formData.append("photo", node);
 
     const URL = "https://frontend-test-assignment-api.abz.agency/api/v1/users";
-    const token =
-      "eyJpdiI6InloZjJjdUNCdmFlQlF2Y0taYVVSQ3c9PSIsInZhbHVlIjoiUjdKRERVN2tNVHR6V1ZQc2J3YlRQcUFxWjdDN1dBVlArWVJWVHNseDZiam9PZlhmbE40XC9OMlZrbk94TWVnY3RyTm1zSHRvbFV2bjNqcTh0M3lZQkhRPT0iLCJtYWMiOiJiZmZlZjUyZTkyNmU0N2U1NDlhMTdkZWNiOTg5NzU2NjA1ZjliZGQ5MzA2ZTdiMWJhMDI5MGE4ZWU3NjA1YmQ1In0=";
 
-    fetch(URL, {
-      method: "POST",
-      body: formData,
-      headers: {
-        Token: token,
-      },
-    })
-      .then(function (response) {
-        return response.json();
+    const sendDataToServer = (token) =>
+      fetch(URL, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Token: token,
+        },
       })
-      .then(function (data) {
-        if (data.user_id) {
-          setRegister(data.user_id);
-          return;
-        }
-
-        PNotify.error({
-          title: "Oh No!",
-          text: `${data.message}`,
+        .then(function (data) {
+          if (data.statusText) {
+            setRegister(data.statusText);
+            return;
+          }
+          PNotify.error({
+            title: "Oh No!",
+            text: `${data.message}`,
+          });
+        })
+        .catch(function (error) {
+          PNotify.error({
+            title: "Oh No!",
+            text: `${error}`,
+          });
         });
-      })
-      .catch(function (error) {
-        PNotify.error({
-          title: "Oh No!",
-          text: `${error}`,
-        });
-      });
 
     //reset input value
     // eslint-disable-next-line
@@ -99,6 +98,7 @@ const FormSection = () => {
       position_id: false,
       photo: setPathFiles(""),
     };
+    sendDataToServer(token);
   };
 
   return (
@@ -167,7 +167,7 @@ const FormSection = () => {
       </form>
       {register && (
         <div className={styles.backdropDiv}>
-          <Modal closeModal={closeModal} />
+          <Modal closeModal={() => setRegister(false)} />
         </div>
       )}
     </div>

@@ -8,7 +8,7 @@ const UsersSectionList = () => {
   const [flag, setFlag] = useState(false);
   // eslint-disable-next-line
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(0);
+  const [usersPerPage, setPostsPerPage] = useState(0);
 
   // REST API method  GET users and sort
   useEffect(() => {
@@ -33,15 +33,17 @@ const UsersSectionList = () => {
     }
   }, []);
 
-  // Get current users
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = users.slice(indexOfFirstPost, indexOfLastPost);
+  
+
+  // logic for current users
+  const indexOfLastUser = currentPage * usersPerPage;
+  const indexOfFirstUser = indexOfLastUser - usersPerPage;
+  const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser);
 
   // show next users page
   const handelClick = () => {
-    setPostsPerPage(postsPerPage + 6);
-    setFlag(users.length - indexOfLastPost - 6 < 0);
+    setPostsPerPage(usersPerPage + 6);
+    setFlag(users.length - indexOfLastUser - 6 < 0);
   };
 
   return (
@@ -53,7 +55,7 @@ const UsersSectionList = () => {
         </p>
         <div>
           <ul className={styles.section__list}>
-            {currentPosts.map((item) => (
+            {currentUsers.map((item) => (
               <li className={styles.section__item} key={item.id}>
                 <img
                   className={styles.section__img}
