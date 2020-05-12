@@ -1,4 +1,4 @@
-.container {
+.wrapper {
     background-image: url('../../assets/image/banner-photo.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -9,7 +9,7 @@
 
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
-    .container {
+    .wrapper {
         background: url('../../assets/image/banner-photo@2x.jpg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -58,7 +58,7 @@
 
 @media (min-width: 768px) {
 
-    .container {
+    .wrapper {
         background-position-x: 0px;
         margin-bottom: 115px;
     }
@@ -117,7 +117,7 @@
         margin-bottom: 34px;
     }
 
-    .container {
+    .wrapper {
         margin-bottom: 152px;
     }
 }

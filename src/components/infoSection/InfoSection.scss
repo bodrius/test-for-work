@@ -1,4 +1,4 @@
-.container {
+.wrap {
     width: 330px;
     margin: 0 auto;
 }
@@ -38,7 +38,7 @@
 
 @media (min-width: 768px) {
 
-    .container {
+    .wrap {
         width: 710px;
     }
 
@@ -70,7 +70,7 @@
 
 @media (min-width: 1170px) {
 
-    .container {
+    .wrap {
         width: 985px;
     }
 

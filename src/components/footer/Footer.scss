@@ -1,0 +1,24 @@
+.footer-wrapper {
+    width: 100%;
+    border-top: 1px solid #b1adad;
+    padding: 10px 0px;
+    &__box {
+        width: 360px;
+        position: relative;
+        margin: 0 auto;
+    }
+    &__text {
+        font-size: 14px;
+        color: #8f8888;
+        font-weight: 300;
+    }
+    &__text::before {
+        content: "\00A9";
+        display: block;
+        width: 10px;
+        height: 10px;
+        position: relative;
+        top: 11px;
+        left: 40px;
+    }
+}

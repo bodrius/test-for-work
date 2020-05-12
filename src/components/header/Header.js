@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 import { NavLink, Link } from "react-router-dom";
-import styles from "./Header.module.css";
 import Menu from "../menu/Menu";
 import animation from "../../ui/AnimationMenu.module.css";
 
@@ -24,11 +23,11 @@ const Header = () => {
   }
 
   return (
-    <div className={styles.container}>
-      <div className={styles.container__box}>
+    <div className="container">
+      <div className="container__box">
         <Link to="/">
           <img
-            className={styles.container__logo}
+            className="container__logo"
             src={require(`../../assets/image/logo.svg`)}
             alt="gift-box"
           />
@@ -37,9 +36,9 @@ const Header = () => {
           <>
           <button
             onClick={() => setFlag(true)}
-            className={styles.container__button}
+            className="container__button"
           ></button>
-        <div className={styles.backdropDive}>
+        <div className="backdropDive">
           <CSSTransition
             in={flag}
             classNames={animation}
@@ -51,23 +50,23 @@ const Header = () => {
         </div>
         </>) : null}
         {window.innerWidth >= 1170 ? (
-          <div className={styles.container__menu}>
-            <ul className={styles.container__list}>
-              <li className={styles.container__item}>
+          <div className="container__menu">
+            <ul className="container__list">
+              <li className="container__item">
                 <NavLink
                   to="/about"
                   activeStyle={{
                     color: "#2f499e",
                   }}
-                  className={styles.modalItem}
+                  className="modalItem"
                 >
                   About me
                 </NavLink>
               </li>
-              <li className={styles.container__item}>
+              <li className="container__item">
                 <NavLink
                   to="/relationship"
-                  className={styles.modalItem}
+                  className="modalItem"
                   activeStyle={{
                     color: "#2f499e",
                   }}
@@ -75,10 +74,10 @@ const Header = () => {
                   Relationship
                 </NavLink>
               </li>
-              <li className={styles.container__item}>
+              <li className="container__item">
                 <NavLink
                   to="/requirements"
-                  className={styles.modalItem}
+                  className="modalItem"
                   activeStyle={{
                     color: "#2f499e",
                   }}
@@ -86,10 +85,10 @@ const Header = () => {
                   Requirements
                 </NavLink>
               </li>
-              <li className={styles.container__item}>
+              <li className="container__item">
                 <NavLink
                   to="/users"
-                  className={styles.modalItem}
+                  className="modalItem"
                   activeStyle={{
                     color: "#2f499e",
                   }}
@@ -97,10 +96,10 @@ const Header = () => {
                   Users
                 </NavLink>
               </li>
-              <li className={styles.container__item}>
+              <li className="container__item">
                 <NavLink
                   to="/signup"
-                  className={styles.modalItem}
+                  className="modalItem"
                   activeStyle={{
                     color: "#2f499e",
                   }}

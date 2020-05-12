@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as listUsers from "../../services";
 import { Tooltip } from "@material-ui/core";
-import styles from "./UsersSection.module.css";
 
 const UsersSectionList = () => {
   const [users, setUsers] = useState([]);
@@ -47,37 +46,37 @@ const UsersSectionList = () => {
   };
 
   return (
-    <div className={styles.section}>
-      <div className={styles.section__users}>
-        <h2 className={styles.section__caption}>Our cheerful users</h2>
-        <p className={styles.section__description}>
+    <div className="cover">
+      <div className="cover__users">
+        <h2 className="cover__caption">Our cheerful users</h2>
+        <p className="cover__description">
           Attention! Sorting users by registration date
         </p>
         <div>
-          <ul className={styles.section__list}>
+          <ul className="cover__list">
             {currentUsers.map((item) => (
-              <li className={styles.section__item} key={item.id}>
+              <li className="cover__item" key={item.id}>
                 <img
-                  className={styles.section__img}
+                  className="cover__img"
                   src={item.photo}
                   alt="img"
                 />
-                <span className={styles.section__userName}>{item.name}</span>
-                <span className={styles.section__paragraph}>
+                <span className="cover__userName">{item.name}</span>
+                <span className="cover__paragraph">
                   {item.position}
                 </span>
                 <Tooltip title={item.email}>
-                  <span className={styles.section__paragraph}>
+                  <span className="cover__paragraph">
                     {item.email}
                   </span>
                 </Tooltip>
-                <span className={styles.section__paragraph}>{item.phone}</span>
+                <span className="cover__paragraph">{item.phone}</span>
               </li>
             ))}
           </ul>
         </div>
         {flag || (
-          <button className={styles.section__btn} onClick={handelClick}>
+          <button className="cover__btn" onClick={handelClick}>
             Show more
           </button>
         )}

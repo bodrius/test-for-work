@@ -1,19 +1,18 @@
 import React from "react";
-import styles from "./MainScreen.module.css";
 import { Link } from "react-scroll";
 
 const MainScreen = () => {
   return (
-    <div className={styles.container}>
-      <div className={styles.box}>
-        <h2 className={styles.box__caption}>
+    <div className="wrapper">
+      <div className="box">
+        <h2 className="box__caption">
           Test assignment for frontend developer position
         </h2>
-        <span className={styles.box__description}>
+        <span className="box__description">
           We kindly remind you that your test assignment should be submitted as
           a link to github/bitbucket repository.
         </span>
-        <span className={styles.box__descriptionTablet}>
+        <span className="box__descriptionTablet">
           We kindly remind you that your test assignment should be submitted as
           a link to github/bitbucket repository. Please be patient, we consider
           and respond to every aplication that meets minimum requirements. We
@@ -21,7 +20,7 @@ const MainScreen = () => {
           the banner area on the different screens
         </span>
         <Link
-          className={styles.box_button}
+          className="box_button"
           activeClass="active"
           to="form"
           spy={true}

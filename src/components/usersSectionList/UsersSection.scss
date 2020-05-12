@@ -1,14 +1,14 @@
-.section {
+.cover {
     background-color: var(--secondary-background);
     padding-bottom: 30px;
 }
 
-.section_users {
+.cover__users {
     width: 330px;
     margin: 0 auto;
 }
 
-.section__caption {
+.cover__caption {
     padding-top: 79px;
     font-weight: 300;
     font-size: 30px;
@@ -16,27 +16,27 @@
     margin-bottom: 10px;
 }
 
-.section__description {
+.cover__description {
     color: #726e6e;
     margin-bottom: 34px;
 }
 
-.section__list {
+.cover__list {
     margin-bottom: 20px;
 }
 
-.section__item {
+.cover__item {
     margin-bottom: 20px;
     width: 200px;
     margin: 0 auto;
     overflow: hidden;
 }
 
-.section__item:last-child {
+.cover__item:last-child {
     margin-bottom: 0;
 }
 
-.section__img {
+.cover__img {
     margin: 0 auto;
     width: 70px;
     height: 70px;
@@ -44,7 +44,7 @@
     margin-bottom: 20px;
 }
 
-.section__userName {
+.cover__userName {
     font-size: 24px;
     line-height: 29px;
     margin-bottom: 21px;
@@ -52,7 +52,7 @@
 }
 
 
-.section__paragraph {
+.cover__paragraph {
     display: block;
     color: #726e6e;
     margin-bottom: 12px;
@@ -60,7 +60,7 @@
     text-overflow: ellipsis;
 }
 
-.section__btn {
+.cover__btn {
     margin-bottom: 30px;
     color: var(--secondary-color);
     padding: 10px 59px;
@@ -71,7 +71,7 @@
 
 @media (min-width: 768px) {
 
-    .section__caption {
+    .cover__caption {
         padding-top: 113px;
         font-weight: 300;
         font-size: 40px;
@@ -79,16 +79,16 @@
         margin-bottom: 18px;
     }
 
-    .section__description {
+    .cover__description {
         margin-bottom: 75px;
     }
 
-    .section_users {
+    .cover__users {
         width: 710px;
         margin: 0 auto;
     }
 
-    .section__list {
+    .cover__list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -96,45 +96,45 @@
         margin: 0 auto;
     }
 
-    .section__item {
+    .cover__item {
         margin-bottom: 20px;
     }
 
-    .section__img {
+    .cover__img {
         margin-bottom: 15px;
     }
 
-    .section__users {
+    .cover__users {
         margin-bottom: 90px;
     }
 
-    .section {
+    .cover {
         margin-bottom: 31px;
     }
 }
 
 @media (min-width: 1170px) {
 
-    .section__caption {
+    .cover__caption {
         padding-top: 154px;
         font-size: 50px;
         line-height: 54px;
     }
 
-    .section_users {
+    .cover__users {
         width: 985px;
     }
 
-    .section__list {
+    .cover__list {
         width: 799px;
     }
 
-    .section__item {
+    .cover__item {
         margin: 0;
         margin-bottom: 90px;
     }
 
-    .section {
+    .cover {
         margin-bottom: 0;
         padding-bottom: 1px;
     }

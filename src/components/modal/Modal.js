@@ -1,19 +1,18 @@
 import React from "react";
-import styles from "./Modal.module.css";
 
 const Modal = ({closeModal}) => {
   return (
     
-    <div className={styles.modalBackdrop}>
-      <div className={styles.modalBox}>
-        <span className={styles.modalCaption}>Congratulations</span>
-        <button onClick={() => closeModal()} className={styles.modalClose}>
+    <div className="modal-container">
+      <div className="modal-container__box">
+        <span className="modal-container__caption">Congratulations</span>
+        <button onClick={() => closeModal()} className="modal-container__close-btn">
           x
         </button>
-        <span className={styles.modalDescription}>
+        <span className="modal-container__description">
           You have successfully passed the registration
         </span>
-        <button onClick={() => closeModal()} className={styles.modalGreatBtn}>
+        <button onClick={() => closeModal()} className="modal-container__btn-great">
           Great
         </button>
       </div>
