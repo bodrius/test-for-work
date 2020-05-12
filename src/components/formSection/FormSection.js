@@ -10,7 +10,7 @@ const FormSection = () => {
   const [pathFiles, setPathFiles] = useState("");
   const [radioButtons, setRadioButtons] = useState([]);
   // const [checked, setChecked] = useState(false);
-  const [register, setRegister] = useState("");
+  const [register, setRegister] = useState("rtrt");
 
   const ref = React.createRef();
 
@@ -60,7 +60,7 @@ const FormSection = () => {
 
     const URL = "https://frontend-test-assignment-api.abz.agency/api/v1/users";
     const token =
-      "eyJpdiI6InJyRWtMRGlGclI4OTl0SkRKc0dTb2c9PSIsInZhbHVlIjoiQzVKWW1kRWJaVXU4Tk45YzJMdmhJN3lhSW5vZmd0WWFLK2cwRUdhdWkrUHdSYnJBRjlvU2FSQjU4VXJRME5sYUpiaDBoVktTbjgyQ1pHV2ZrVEQ4ekE9PSIsIm1hYyI6ImU2OTIwNThjYmQ0MjRmYzljNmE2ZGMwZDhhOWU1M2MwY2MzY2Q5ZTFkNWRjM2U0OGU0MzdlYjUzZGUxYWMzYTMifQ==";
+      "eyJpdiI6InloZjJjdUNCdmFlQlF2Y0taYVVSQ3c9PSIsInZhbHVlIjoiUjdKRERVN2tNVHR6V1ZQc2J3YlRQcUFxWjdDN1dBVlArWVJWVHNseDZiam9PZlhmbE40XC9OMlZrbk94TWVnY3RyTm1zSHRvbFV2bjNqcTh0M3lZQkhRPT0iLCJtYWMiOiJiZmZlZjUyZTkyNmU0N2U1NDlhMTdkZWNiOTg5NzU2NjA1ZjliZGQ5MzA2ZTdiMWJhMDI5MGE4ZWU3NjA1YmQ1In0=";
 
     fetch(URL, {
       method: "POST",
