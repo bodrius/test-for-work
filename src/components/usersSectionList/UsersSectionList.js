@@ -10,7 +10,7 @@ const UsersSectionList = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(0);
 
-  //method GET users and sort
+  // REST API method  GET users and sort
   useEffect(() => {
     listUsers.getUsers().then((user) => {
       return setUsers(

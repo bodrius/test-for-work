@@ -8,6 +8,7 @@ import animation from "../../ui/AnimationMenu.module.css";
 const Header = () => {
   const [flag, setFlag] = useState(false);
 
+  // function close modal window to click outside modal window
   function useOutsideAlerter(ref) {
     useEffect(() => {
       function handleClickOutside(event) {
@@ -33,11 +34,11 @@ const Header = () => {
           />
         </Link>
         {window.innerWidth < 1170 ? (
+          <>
           <button
             onClick={() => setFlag(true)}
             className={styles.container__button}
           ></button>
-        ) : null}
         <div className={styles.backdropDive}>
           <CSSTransition
             in={flag}
@@ -48,6 +49,7 @@ const Header = () => {
             <Menu closeModal={useOutsideAlerter} />
           </CSSTransition>
         </div>
+        </>) : null}
         {window.innerWidth >= 1170 ? (
           <div className={styles.container__menu}>
             <ul className={styles.container__list}>
@@ -73,7 +75,6 @@ const Header = () => {
                   Relationship
                 </NavLink>
               </li>
-
               <li className={styles.container__item}>
                 <NavLink
                   to="/requirements"

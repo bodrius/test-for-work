@@ -14,16 +14,19 @@ const FormSection = () => {
 
   const ref = React.createRef();
 
+  // REST API methot GET for show radio button
   useEffect(() => {
     getPoints.getUserPosition().then((work) => {
       return setRadioButtons(work.data.positions);
     });
   }, []);
 
+  // function for close modal window
   const closeModal = () => {
     setRegister(false);
   };
 
+  // function for receive id checked radio button
   const getIdRadioBtn = (event) => {
     const points = event.target.elements.rb;
     const getValue = Object.entries(points);
@@ -34,6 +37,7 @@ const FormSection = () => {
     return finalRez[1][1].id;
   };
 
+  //function for get data from some user and send data to server
   const handelSubmitForm = (event) => {
     event.preventDefault();
     let id = getIdRadioBtn(event);
@@ -86,6 +90,7 @@ const FormSection = () => {
         });
       });
 
+    //reset input value
     // eslint-disable-next-line
     const userRefresh = {
       login: (event.target.elements[0].value = ""),
@@ -143,7 +148,6 @@ const FormSection = () => {
           ))}
         </div>
         <p className={styles.formUserPosition}>Photo</p>
-
         <div className={styles.uploadSection}>
           <input
             className={styles.uploadInput}

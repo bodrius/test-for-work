@@ -1,22 +1,22 @@
-.container{
+.container {
     width: 100%;
     border-top: 1px solid #b1adad;
-    padding: 10px 0px;   
+    padding: 10px 0px;
 }
 
-.box{
+.box {
     width: 360px;
     position: relative;
     margin: 0 auto;
 }
 
-.footerBox{
+.footerBox {
     font-size: 14px;
     color: #8f8888;
     font-weight: 300;
 }
 
-.footerBox::before{
+.footerBox::before {
     content: "\00A9";
     display: block;
     width: 10px;

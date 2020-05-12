@@ -24,12 +24,10 @@
     outline: none;
 }
 
-
 .backdropDive {
     position: absolute;
     top: 0;
     left: 0;
-
 }
 
 @media (min-width: 768px) {
@@ -48,10 +46,17 @@
 
     .modalItem {
         text-align: right;
-        padding-right: 18px;
         margin: 0;
         padding-top: 10px;
         color: #000000;
+    }
+
+    .container__item {
+        padding-right: 18px;
+    }
+
+    .container__item:last-child {
+        padding-right: 0px;
     }
 
     .modalItem:hover {
@@ -62,7 +67,7 @@
         display: flex;
     }
 
-    .container__logo{
+    .container__logo {
         padding-top: 10px;
         padding-left: 10px;
     }

@@ -1,13 +1,11 @@
 .section {
     background-color: var(--secondary-background);
     padding-bottom: 30px;
-
 }
 
 .section_users {
     width: 330px;
     margin: 0 auto;
-
 }
 
 .section__caption {
@@ -72,6 +70,7 @@
 }
 
 @media (min-width: 768px) {
+
     .section__caption {
         padding-top: 113px;
         font-weight: 300;
@@ -125,6 +124,7 @@
     .section_users {
         width: 985px;
     }
+
     .section__list {
         width: 799px;
     }
