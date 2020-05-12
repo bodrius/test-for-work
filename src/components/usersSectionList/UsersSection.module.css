@@ -113,3 +113,29 @@
         margin-bottom: 31px;
     }
 }
+
+@media (min-width: 1170px) {
+
+    .section__caption {
+        padding-top: 154px;
+        font-size: 50px;
+        line-height: 54px;
+    }
+
+    .section_users {
+        width: 985px;
+    }
+    .section__list {
+        width: 799px;
+    }
+
+    .section__item {
+        margin: 0;
+        margin-bottom: 90px;
+    }
+
+    .section {
+        margin-bottom: 0;
+        padding-bottom: 1px;
+    }
+}

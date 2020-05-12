@@ -27,7 +27,7 @@ const MainScreen = () => {
           to="form"
           spy={true}
           smooth={true}
-          offset={10}
+          offset={50}
           duration={500}
         >
           Sing up now

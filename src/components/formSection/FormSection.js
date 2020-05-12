@@ -56,7 +56,7 @@ const FormSection = () => {
 
     const URL = "https://frontend-test-assignment-api.abz.agency/api/v1/users";
     const token =
-      "eyJpdiI6IittZlpkb2JNek1tTjUzVDl6N1hlMkE9PSIsInZhbHVlIjoiMm5jNVBmUlJjczI4XC9GenU0TlRPbDVuUnl2WGtNQkJBSFhFTytHNVBWK0NITGNhV1J2eW0xalwvRlh6WEtUQkZsRnlHNUFQYkxlY3pVeGtHQ1B2ZVE2QT09IiwibWFjIjoiYjk3ZjZkZmQ0Y2RkNmY5YmJkMDU1OTUzZjU5MTA2MmE4NDMzNjE5NWFjOWZiNGZmZjE4NWM2NTFmMWRiNDBhMSJ9";
+      "eyJpdiI6InJyRWtMRGlGclI4OTl0SkRKc0dTb2c9PSIsInZhbHVlIjoiQzVKWW1kRWJaVXU4Tk45YzJMdmhJN3lhSW5vZmd0WWFLK2cwRUdhdWkrUHdSYnJBRjlvU2FSQjU4VXJRME5sYUpiaDBoVktTbjgyQ1pHV2ZrVEQ4ekE9PSIsIm1hYyI6ImU2OTIwNThjYmQ0MjRmYzljNmE2ZGMwZDhhOWU1M2MwY2MzY2Q5ZTFkNWRjM2U0OGU0MzdlYjUzZGUxYWMzYTMifQ==";
 
     fetch(URL, {
       method: "POST",

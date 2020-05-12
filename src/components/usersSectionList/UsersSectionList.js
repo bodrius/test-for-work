@@ -6,9 +6,11 @@ import styles from "./UsersSection.module.css";
 const UsersSectionList = () => {
   const [users, setUsers] = useState([]);
   const [flag, setFlag] = useState(false);
+  // eslint-disable-next-line
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(3);
-  
+  const [postsPerPage, setPostsPerPage] = useState(0);
+
+  //method GET users and sort
   useEffect(() => {
     listUsers.getUsers().then((user) => {
       return setUsers(
@@ -20,20 +22,26 @@ const UsersSectionList = () => {
     });
   }, []);
 
+  // check window width for show users
+  useEffect(() => {
+    let showUser = 3;
+    setPostsPerPage(showUser);
+
+    if (window.innerWidth > 767) {
+      let showUser = 6;
+      setPostsPerPage(showUser);
+    }
+  }, []);
+
   // Get current users
-
-  // if (window.innerWidth > 767) {
-  //   const indexOfLastPost = currentPage * postsPerPage;
-  //   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  // }
-
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = users.slice(indexOfFirstPost, indexOfLastPost);
 
+  // show next users page
   const handelClick = () => {
-    setPostsPerPage(postsPerPage + 6)
-    setFlag(indexOfLastPost > currentPosts.length);
+    setPostsPerPage(postsPerPage + 6);
+    setFlag(users.length - indexOfLastPost - 6 < 0);
   };
 
   return (

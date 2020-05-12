@@ -47,3 +47,9 @@ color: #000000;
 .modalLi:first-child{
     padding-top: 25px;
 }
+
+@media(min-width: 768px){
+    .modalItem:hover{
+        color:#b34747;
+    }
+}

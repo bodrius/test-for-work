@@ -257,3 +257,17 @@ input[type="radio"]:checked + label:after {
     }
     
 }
+
+
+@media (min-width: 1170px) {
+    .form__caption {
+        font-size: 50px;
+        line-height: 54px;
+        margin-bottom: 18px;
+        padding-top: 135px;
+    }
+
+    .form {
+        width: 710px;
+    }
+}
