@@ -31,7 +31,7 @@
     }
 
     &__btn {
-        color: var(--third-color);
+        color: $third-color;
         margin-bottom: 75px;
         cursor: pointer;
         outline: none;
@@ -74,15 +74,16 @@
 
     .wrap {
         width: 985px;
-    
 
-    &__caption {
-        letter-spacing: -1px;
-        font-size: 50px;
-        line-height: 54px;
-        margin-bottom: 67px;
+
+        &__caption {
+            letter-spacing: -1px;
+            font-size: 50px;
+            line-height: 54px;
+            margin-bottom: 67px;
+        }
     }
-    }
+
     .section__img {
         width: 377px;
     }

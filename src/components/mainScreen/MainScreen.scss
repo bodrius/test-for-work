@@ -27,7 +27,7 @@
         line-height: 34px;
         font-weight: 300;
         text-transform: uppercase;
-        color: var(--secondary-color);
+        color: $secondary-color;
         margin-bottom: 18px;
     }
 
@@ -36,15 +36,15 @@
     }
 
     &__description {
-        color: var(--secondary-color);
+        color: $secondary-color;
         font-weight: 300;
         font-size: 15px;
     }
 
     &__button {
         margin-top: 23px;
-        color: var(--secondary-color);
-        background-color: var(--third-color);
+        color: $secondary-color;
+        background-color: $third-color;
         border-radius: 3px;
         cursor: pointer;
         outline: none;
@@ -82,7 +82,7 @@
 
         &__descriptionTablet {
             display: block;
-            color: var(--secondary-color);
+            color: $secondary-color;
             font-weight: 300;
             font-size: 15px;
             width: 450px;

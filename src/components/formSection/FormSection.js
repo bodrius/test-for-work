@@ -13,7 +13,6 @@ const FormSection = () => {
   const [checked, setChecked] = useState(false);
   const [register, setRegister] = useState("");
 
-  console.log("checked", checked);
   const ref = React.createRef();
 
   // REST API methot GET for show radio button

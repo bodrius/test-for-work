@@ -1,5 +1,5 @@
 .cover {
-    background-color: var(--secondary-background);
+    background-color: $secondary-background;
     padding-bottom: 30px;
 }
 
@@ -62,9 +62,9 @@
 
 .cover__btn {
     margin-bottom: 30px;
-    color: var(--secondary-color);
+    color: $secondary-color;
     padding: 10px 59px;
-    background-color: var(--third-color);
+    background-color: $third-color;
     border-radius: 3px;
     outline: none;
 }
