@@ -1,15 +1,16 @@
 # test-for-work
 
 **Использовал**:
-*React, React Router, hooks*
-*подход mobile-first*
-*анимацию появление блоков на странице*
-*async await*
-*REST API*
-*синтаксис ES6+*
-*препроцессор SCSS*
-*прописаны основные meta теги в index.html*
-*методологию именнования классов BEM*
+1. React, React Router, hooks
+2. подход mobile-first
+3. анимацию появление блоков на странице
+4. async await
+5. REST API
+6. синтаксис ES6+
+7. препроцессор SCSS
+8. прописаны основные meta теги в index.html
+9. методологию именнования классов BEM
+
 Дополнительные npm пакеты:
 - [axios] (https://www.npmjs.com/package/axios) promise based HTTP client.
 - [react-scroll] (https://www.npmjs.com/package/react-scroll) component for animating vertical scrolling.
