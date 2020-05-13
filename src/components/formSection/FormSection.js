@@ -117,7 +117,7 @@ const FormSection = () => {
           className="register-form__input"
           type="text"
           placeholder="Your name"
-          autoComplete="false"
+          autoComplete="true"
           required
         />
         <p className="register-form__description">Email</p>

@@ -33,7 +33,13 @@
         border-radius: 3px;
         padding-left: 20px;
         margin-bottom: 15px;
+        outline: #0285ff;
+    }
+
+    &__input:focus {
         outline: none;
+        border: 1px solid #0285ff;
+        box-shadow: 0 0  3px #0285ff;
     }
 
 

@@ -21,6 +21,10 @@ a {
   display: block;
 }
 
+*:focus {
+  outline: none;
+}
+
 button {
   border: none;
   background-color: transparent;
