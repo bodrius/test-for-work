@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 const InfoSection = () => {
   return (
     <div className="wrap">
-      <h3 className="section__caption">Lets's get acquainted</h3>
+      <h3 className="wrap__caption">Lets's get acquainted</h3>
       <div className="section__boxTablet">
         <div className="section__boxImage">
           <img
@@ -13,23 +13,23 @@ const InfoSection = () => {
             alt="img"
           />
         </div>
-        <div>
-          <h4 className="section__title">
+        <div className="info-section">
+          <h4 className="info-section__title">
             I am cool frontend developer
           </h4>
-          <p className="section__description">
+          <p className="info-section__description">
             We will evaluate how clean your approach to wtiting CSS and
             Javascript code is. You can use any CSS and Javascript 3rd party
             libraries without any restriction.
           </p>
-          <p className="section__description">
+          <p className="info-section__description">
             If 3rd party css/javascript libraries are added to the project via
             bower/npm/yarn you will get bonus points. If you use any task runner
             (gulp/webpack) you will get bonus points as well. Slise service
             directory page PSD mockup into HTML/CSS3.
           </p>
           <Link
-            className="section__btn"
+            className="info-section__btn"
             activeClass="active"
             to="form"
             spy={true}

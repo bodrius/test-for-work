@@ -10,15 +10,16 @@ const FormSection = () => {
   const [pathFiles, setPathFiles] = useState("");
   const [radioButtons, setRadioButtons] = useState([]);
   const [token, setGetToken] = useState("");
-  // const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(false);
   const [register, setRegister] = useState("");
 
+  console.log("checked", checked);
   const ref = React.createRef();
 
   // REST API methot GET for show radio button
   useEffect(() => {
     getPoints.getUserPosition().then((work) => {
-      return setRadioButtons(work.data.positions);
+      return setRadioButtons(work.data.positions.reverse());
     });
   }, []);
 
@@ -61,25 +62,27 @@ const FormSection = () => {
     formData.append("phone", `${user.phone}`);
     formData.append("photo", node);
 
-    const URL = "https://frontend-test-assignment-api.abz.agency/api/v1/users";
-
     const sendDataToServer = (token) =>
-      fetch(URL, {
+      fetch("https://frontend-test-assignment-api.abz.agency/api/v1/users", {
         method: "POST",
         body: formData,
         headers: {
-          Token: token,
+          Token: token, // get token with GET api/v1/token method
         },
       })
+        .then(function (response) {
+          return response.json();
+        })
         .then(function (data) {
-          if (data.statusText) {
-            setRegister(data.statusText);
+          if (data.user_id) {
+            setRegister(data.user_id);
             return;
+          } else {
+            PNotify.error({
+              title: "Oh No!",
+              text: `${data.message}`,
+            });
           }
-          PNotify.error({
-            title: "Oh No!",
-            text: `${data.message}`,
-          });
         })
         .catch(function (error) {
           PNotify.error({
@@ -94,9 +97,10 @@ const FormSection = () => {
       login: (event.target.elements[0].value = ""),
       email: (event.target.elements[1].value = ""),
       phone: (event.target.elements[2].value = ""),
-      position_id: false,
+      position_id: setChecked(true),
       photo: setPathFiles(""),
     };
+
     sendDataToServer(token);
   };
 
@@ -107,49 +111,54 @@ const FormSection = () => {
         Attention! After succsesful registration and alert, update the list of
         users in the block from the top
       </p>
-      <form onSubmit={handelSubmitForm}>
-        <p className="formInputDesk">Name</p>
+      <form className="register-form" onSubmit={handelSubmitForm}>
+        <p className="register-form__description">Name</p>
         <input
           name="login"
-          className="formInput"
+          className="register-form__input"
           type="text"
           placeholder="Your name"
           autoComplete="false"
           required
         />
-        <p className="formInputDesk">Email</p>
+        <p className="register-form__description">Email</p>
         <input
           name="email"
-          className="formInput"
+          className="register-form__input"
           type="email"
           placeholder="Your email"
           required
         />
-        <p className="formInputDesk">Phone number</p>
+        <p className="register-form__description">Phone number</p>
         <input
           name="phone"
           pattern="(^[\+]{0,1}380([0-9]{9})$)"
-          className="formInput lastInput"
+          className="register-form__input last-input"
           type="tel"
           placeholder="+380 XX XXX XX XX"
           required
         />
-        <p className="formNumberDesc">
+        <p className="register-form__numberdesc">
           Enter phone number in open format
         </p>
-        <p className="formUserPosition">Select your position</p>
-        <div className="containerRadioBtn">
+        <p className="register-form__position">Select your position</p>
+        <div className="radio-box">
           {radioButtons.map((item) => (
-            <div className="radioBtn" key={item.id}>
-              <input type="radio" name="rb" required id={item.id} />
+            <div className="radio-button" key={item.id}>
+              <input
+                type="radio"
+                name="rb"
+                checked={checked ? false : null}
+                id={item.id}
+              />
               <label htmlFor={item.id}>{item.name}</label>
             </div>
           ))}
         </div>
-        <p className="formUserPosition">Photo</p>
-        <div className="uploadSection">
+        <p className="register-form__position">Photo</p>
+        <div className="section-upload">
           <input
-            className="uploadInput"
+            className="section-upload__input"
             disabled={true}
             placeholder={
               pathFiles ? `${pathFiles.name}` : `${"Upload your photo"}`
@@ -157,15 +166,15 @@ const FormSection = () => {
             type="text"
           />
           <InputFiles ref={ref} onChange={(files) => setPathFiles(files[0])}>
-            <button className="uploadBtn">Browse</button>
+            <button className="section-upload__btn">Browse</button>
           </InputFiles>
         </div>
-        <button type="submit" className="btnSubmit">
+        <button type="submit" className="button-submit">
           Sign up now
         </button>
       </form>
       {register && (
-        <div className="backdropDiv">
+        <div className="box-backdrop">
           <Modal closeModal={() => setRegister(false)} />
         </div>
       )}

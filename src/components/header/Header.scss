@@ -4,30 +4,30 @@
     background: #ffffff;
     z-index: 1;
     margin: 0;
-}
 
-.container__box {
-    width: 330px;
-    display: flex;
-    align-items: center;
-    margin: 10px auto;
-    justify-content: space-between;
-}
+    &__box {
+        width: 330px;
+        display: flex;
+        align-items: center;
+        margin: 10px auto;
+        justify-content: space-between;
+    }
 
-.container__button {
-    background-image: url(../../assets/image/icon-menu.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 21px;
-    height: 19px;
-    outline: none;
-}
+    &__button {
+        background-image: url(../../assets/image/icon-menu.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 21px;
+        height: 19px;
+        outline: none;
+    }
 
-.backdropDive {
-    position: absolute;
-    top: 0;
-    left: 0;
+    &__menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
 
 @media (min-width: 768px) {
@@ -42,33 +42,41 @@
     .container__box {
         width: 985px;
         height: 30px;
+
+        &__logo {
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+
     }
 
-    .modalItem {
-        text-align: right;
-        margin: 0;
-        padding-top: 27px;
-        color: #000000;
+    .header {
+        margin-bottom: 21px;
+
+        &__list {
+            display: flex;
+
+        }
+
+        &__item {
+            padding-right: 18px;
+        }
+
+        &__item:last-child {
+            padding-right: 0px;
+        }
+
+        &__link {
+            text-align: right;
+            margin: 0;
+            padding-top: 27px;
+            color: #000000;
+        }
+
+        &__link:hover {
+            color: #b34747;
+        }
     }
 
-    .container__item {
-        padding-right: 18px;
-    }
 
-    .container__item:last-child {
-        padding-right: 0px;
-    }
-
-    .modalItem:hover {
-        color: #b34747;
-    }
-
-    .container__list {
-        display: flex;
-    }
-
-    .container__logo {
-        padding-top: 10px;
-        padding-left: 10px;
-    }
 }

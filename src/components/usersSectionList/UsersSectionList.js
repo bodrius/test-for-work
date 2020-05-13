@@ -47,9 +47,9 @@ const UsersSectionList = () => {
 
   return (
     <div className="cover">
-      <div className="cover__users">
-        <h2 className="cover__caption">Our cheerful users</h2>
-        <p className="cover__description">
+      <div className="box-users">
+        <h2 className="box-users__caption">Our cheerful users</h2>
+        <p className="box-users__description">
           Attention! Sorting users by registration date
         </p>
         <div>

@@ -38,7 +38,7 @@ const Header = () => {
             onClick={() => setFlag(true)}
             className="container__button"
           ></button>
-        <div className="backdropDive">
+        <div className="container__menu">
           <CSSTransition
             in={flag}
             classNames={animation}
@@ -50,23 +50,23 @@ const Header = () => {
         </div>
         </>) : null}
         {window.innerWidth >= 1170 ? (
-          <div className="container__menu">
-            <ul className="container__list">
-              <li className="container__item">
+          <div className="header">
+            <ul className="header__list">
+              <li className="header__item">
                 <NavLink
                   to="/about"
                   activeStyle={{
                     color: "#2f499e",
                   }}
-                  className="modalItem"
+                  className="header__link"
                 >
                   About me
                 </NavLink>
               </li>
-              <li className="container__item">
+              <li className="header__item">
                 <NavLink
                   to="/relationship"
-                  className="modalItem"
+                  className="header__link"
                   activeStyle={{
                     color: "#2f499e",
                   }}
@@ -74,10 +74,10 @@ const Header = () => {
                   Relationship
                 </NavLink>
               </li>
-              <li className="container__item">
+              <li className="header__item">
                 <NavLink
                   to="/requirements"
-                  className="modalItem"
+                  className="header__link"
                   activeStyle={{
                     color: "#2f499e",
                   }}
@@ -85,10 +85,10 @@ const Header = () => {
                   Requirements
                 </NavLink>
               </li>
-              <li className="container__item">
+              <li className="header__item">
                 <NavLink
                   to="/users"
-                  className="modalItem"
+                  className="header__link"
                   activeStyle={{
                     color: "#2f499e",
                   }}
@@ -96,10 +96,10 @@ const Header = () => {
                   Users
                 </NavLink>
               </li>
-              <li className="container__item">
+              <li className="header__item">
                 <NavLink
                   to="/signup"
-                  className="modalItem"
+                  className="header__link"
                   activeStyle={{
                     color: "#2f499e",
                   }}

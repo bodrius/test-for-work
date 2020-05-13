@@ -7,26 +7,26 @@ const Menu = ({ closeModal }) => {
   closeModal(wrapperRef);
 
   return (
-    <div className="modalBackdrops">
-      <div ref={wrapperRef} className="modalBoxes">
+    <div className="menu-backdrops">
+      <div ref={wrapperRef} className="menu-box">
         <img
-          className="modalLogo"
+          className="menu-box__logo"
           src={require(`../../assets/image/logo.svg`)}
           alt="gift-box"
         />
-        <ul className="modalList">
-        <li className="modalLi"><NavLink
+        <ul className="menu-box__list">
+        <li className="menu-box__item"><NavLink
             to="/about"
             activeStyle={{
                 color: "#2f499e",
             }}
-            className="modalItem"
+            className="menu-box__link"
           >
             About me
           </NavLink></li>
-          <li className="modalLi"><NavLink
+          <li className="menu-box__item"><NavLink
             to="/relationship"
-            className="modalItem"
+            className="menu-box__link"
             activeStyle={{
               color: "#2f499e",
             }}
@@ -35,27 +35,27 @@ const Menu = ({ closeModal }) => {
           </NavLink></li>
           
 
-          <li className="modalLi"><NavLink
+          <li className="menu-box__item"><NavLink
             to="/users"
-            className="modalItem"
+            className="menu-box__link"
             activeStyle={{
               color: "#2f499e",
             }}
           >
             Users
           </NavLink></li>
-          <li className="modalLi"><NavLink
+          <li className="menu-box__item"><NavLink
             to="/signup"
-            className="modalItem"
+            className="menu-box__link"
             activeStyle={{
               color: "#2f499e",
             }}
           >
             Sign up
           </NavLink></li>
-          <li className="modalLi"><NavLink
+          <li className="menu-box__item"><NavLink
             to="/termsandconditions"
-            className="modalItem"
+            className="menu-box__link"
             activeStyle={{
               color: "#2f499e",
             }}
@@ -63,47 +63,47 @@ const Menu = ({ closeModal }) => {
             Terms and conditions
           </NavLink></li>
         </ul>
-        <ul className="borderStyle">
-          <li className="modalLi">
+        <ul className="second-section">
+          <li className="menu-box__item">
           <NavLink
             to="/howitwork"
-            className="modalItem"
+            className="menu-box__link"
             activeStyle={{
               color: "#2f499e",
             }}
           >
             How it work
           </NavLink></li>
-          <li className="modalLi"> <NavLink
+          <li className="menu-box__item"> <NavLink
             to="/partnership"
-            className="modalItem"
+            className="menu-box__link"
             activeStyle={{
               color: "#2f499e",
             }}
           >
             Partnership
           </NavLink></li>
-          <li className="modalLi"><NavLink
+          <li className="menu-box__item"><NavLink
             to="/help"
-            className="modalItem"
+            className="menu-box__link"
             activeStyle={{
               color: "#2f499e",
             }}
           >
             Help
           </NavLink></li>
-          <li className="modalLi"> <NavLink
+          <li className="menu-box__item"> <NavLink
             to="/leavetestimonial"
-            className="modalItem"
+            className="menu-box__link"
             activeStyle={{
               color: "#2f499e",
             }}
           >
             Leave testimonial
           </NavLink></li>
-          <li className="modalLi"><NavLink
+          <li className="menu-box__item"><NavLink
             to="/contact"
-            className="modalItem"
+            className="menu-box__link"
             activeStyle={{
               color: "#2f499e",
             }}
@@ -111,46 +111,46 @@ const Menu = ({ closeModal }) => {
             Contact us
           </NavLink></li>
         </ul>
-        <ul className="borderStyle">
-          <li className="modalLi"><NavLink
+        <ul className="second-section">
+          <li className="menu-box__item"><NavLink
             to="/articles"
-            className="modalItem"
+            className="menu-box__link"
             activeStyle={{
               color: "#2f499e",
             }}
           >
             Articles
           </NavLink></li>
-          <li className="modalLi"><NavLink
+          <li className="menu-box__item"><NavLink
             to="/ournews"
-            className="modalItem"
+            className="menu-box__link"
             activeStyle={{
               color: "#2f499e",
             }}
           >
             Our news
           </NavLink></li>
-          <li className="modalLi"> <NavLink
+          <li className="menu-box__item"> <NavLink
             to="/testimonial"
-            className="modalItem"
+            className="menu-box__link"
             activeStyle={{
               color: "#2f499e",
             }}
           >
             Testimonial
           </NavLink></li>
-          <li className="modalLi"> <NavLink
+          <li className="menu-box__item"> <NavLink
             to="/licenses"
-            className="modalItem"
+            className="menu-box__link"
             activeStyle={{
               color: "#2f499e",
             }}
           >
             Licenses
           </NavLink></li>
-          <li className="modalLi"> <NavLink
+          <li className="menu-box__item"> <NavLink
             to="/privacypolice"
-            className="modalItem"
+            className="menu-box__link"
             activeStyle={{
               color: "#2f499e",
             }}

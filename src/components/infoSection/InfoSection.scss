@@ -1,13 +1,13 @@
 .wrap {
     width: 330px;
     margin: 0 auto;
-}
 
-.section__caption {
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 34px;
-    margin-bottom: 30px;
+    &__caption {
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 34px;
+        margin-bottom: 30px;
+    }
 }
 
 .section__img {
@@ -15,38 +15,40 @@
     width: 306px;
 }
 
-.section__title {
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 29px;
-    margin-bottom: 19px;
-    letter-spacing: 0.7px;
-}
+.info-section {
+    &__title {
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 29px;
+        margin-bottom: 19px;
+        letter-spacing: 0.7px;
+    }
 
-.section__description {
-    text-align: justify;
-    color: #726e6e;
-    margin-bottom: 26px;
-}
+    &__description {
+        text-align: justify;
+        color: #726e6e;
+        margin-bottom: 26px;
+    }
 
-.section__btn {
-    color: var(--third-color);
-    margin-bottom: 75px;
-    cursor: pointer;
-    outline: none;
+    &__btn {
+        color: var(--third-color);
+        margin-bottom: 75px;
+        cursor: pointer;
+        outline: none;
+    }
 }
 
 @media (min-width: 768px) {
 
     .wrap {
         width: 710px;
-    }
 
-    .section__caption {
-        letter-spacing: -1px;
-        font-size: 40px;
-        line-height: 44px;
-        margin-bottom: 67px;
+        &__caption {
+            letter-spacing: -1px;
+            font-size: 40px;
+            line-height: 44px;
+            margin-bottom: 67px;
+        }
     }
 
     .section__boxTablet {
@@ -63,7 +65,7 @@
         margin: 0;
     }
 
-    .section__btn {
+    .info-section__btn {
         margin-bottom: 115px;
     }
 }
@@ -72,15 +74,15 @@
 
     .wrap {
         width: 985px;
-    }
+    
 
-    .section__caption {
+    &__caption {
         letter-spacing: -1px;
         font-size: 50px;
         line-height: 54px;
         margin-bottom: 67px;
     }
-
+    }
     .section__img {
         width: 377px;
     }
@@ -89,7 +91,7 @@
         width: 1235px;
     }
 
-    .section__btn {
+    .info-section__btn {
         margin-bottom: 155px;
     }
 }

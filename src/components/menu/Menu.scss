@@ -1,4 +1,4 @@
-.modalBackdrops {
+.menu-backdrops {
     background-color: rgba(100, 100, 100, 0.6);
     display: flex;
     justify-content: center;
@@ -10,47 +10,38 @@
     z-index: 1;
 }
 
-.modalBoxes {
+.menu-box {
     box-shadow: 3px 8px 19px 0px rgba(0, 0, 0, 0.4);
     width: 293px;
     height: 100vh;
     background-color: #fff;
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
     overflow-x: hidden;
-}
 
-.modalLogo{
-    padding: 10px 0;
-    padding-left: 14px;
-}
-
-.modalList{
-    border-top: 1px solid #86848467;
-    border-bottom: 1px solid #86848467;
-}
-
-
-
-.borderStyle{
-    border-bottom: 1px solid #86848467
-}
-
-.modalItem{
-text-align: left;
-padding-left: 10px;
-margin-bottom: 20px;
-color: #000000;
-}
-
-
-.modalLi:first-child{
-    padding-top: 25px;
-}
-
-@media(min-width: 768px){
-    .modalItem:hover{
-        color:#b34747;
+    &__logo {
+        padding: 10px 0;
+        padding-left: 14px;
     }
+
+    &__list {
+        border-top: 1px solid #86848467;
+        border-bottom: 1px solid #86848467;
+    }
+
+    &__link {
+        text-align: left;
+        padding-left: 10px;
+        margin-bottom: 20px;
+        color: #000000;
+    }
+
+    &__item:first-child {
+        padding-top: 25px;
+    }
+}
+
+.second-section {
+    border-bottom: 1px solid #86848467
 }
