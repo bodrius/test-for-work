@@ -8,10 +8,9 @@
 5. REST API
 6. синтаксис ES6+
 7. препроцессор SCSS
-8. прописаны основные meta теги в index.html
-9. методологию именнования классов BEM
-10. Pixel Perfect верстка 
-11. Site checked on Google Page Speed and Google Chrome Audit (95% / AAAA)
+8. методологию именнования классов BEM
+9. Pixel Perfect верстка 
+10. Site checked on Google Page Speed and Google Chrome Audit (95% / AAAA)
 Дополнительные npm пакеты:
 - [axios](https://www.npmjs.com/package/axios) promise based HTTP client.
 - [react-scroll](https://www.npmjs.com/package/react-scroll) component for animating vertical scrolling.
