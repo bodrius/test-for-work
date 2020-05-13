@@ -10,7 +10,7 @@
 7. препроцессор SCSS
 8. прописаны основные meta теги в index.html
 9. методологию именнования классов BEM
-
+10. Pixel Perfect верстка 
 Дополнительные npm пакеты:
 - [axios](https://www.npmjs.com/package/axios) promise based HTTP client.
 - [react-scroll](https://www.npmjs.com/package/react-scroll) component for animating vertical scrolling.
